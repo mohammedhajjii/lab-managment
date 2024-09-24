@@ -1,0 +1,23 @@
+
+server:
+  port: 9990
+
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    config:
+      enabled: false
+    gateway:
+        routes:
+          - id: keycloak
+            uri: http://localhost:8080
+            predicates:
+              - Path=/realms/lab-management/**, /admin/realms/lab-management/**
+
+
+    discovery:
+      enabled: false
+
+
+

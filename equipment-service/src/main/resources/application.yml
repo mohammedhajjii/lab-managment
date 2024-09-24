@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: equipment-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/equipments_db?createDatabaseIfNotExist=true
+    username: root
+    password:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database: mysql
+
+
+  cloud:
+    discovery:
+      enabled: false
+    config:
+      enabled: false
+
+
+server:
+  port: 9092
+
+
+
+
+equipment:
+  qrcode:
+    dimension:
+      height: 300
+      width: 300
+
